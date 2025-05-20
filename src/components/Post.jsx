@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router";
 
 const Post = () => {
-    return (
-        <div>
-            single post
-        </div>
-    );
+  const post = useLoaderData();
+  console.log(post);
+
+  return (
+    <div>
+      <h2>{post.title}</h2>
+      <p>{post.body}</p>
+    </div>
+  );
 };
 
 export default Post;
